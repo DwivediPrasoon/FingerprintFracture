@@ -16,7 +16,10 @@ function [ MinutiaSets StraightMinutiaSets ] = brokenEnroll( Minutia, ShapeCount
         MinutiaSets{i}=zeros(PointCount, 3);
         StraightMinutiaSets{i}=zeros(PointCount, 3);
     end
-    rng(Seed);
+    notOctave = exist('OCTAVE_VERSION', 'builtin') == 0;
+    if notOctave
+        rng(Seed);
+    end
     for Shape = 1:ShapeCount
         for Point = 1:PointCount
             Taken = true;

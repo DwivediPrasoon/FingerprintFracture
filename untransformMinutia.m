@@ -1,4 +1,4 @@
-function [ TransformedMinutia ] = transformMinutia( Minutia, Transformation)
+function [ TransformedMinutia ] = untransformMinutia( Minutia, Transformation)
 %TRANFORMMINUTIA Inversely Rotates and translates a minutia
 %   Rotates and Translates a minutia (x,y,theta)
     DTheta = -Transformation(3)*pi/180.0;
