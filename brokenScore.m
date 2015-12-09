@@ -12,7 +12,9 @@ if nargin < 5
     FormatString=['*r';'sr';'dr';'+r';'*b';'sb';'db';'+b';'*g';'sg';'dg';'+g';'*m';'sm';'dm';'+m';'*c';'sc';'dc';'+c';'*y';'sy';'dy';'+y'];
 end
 Score=0;
-held = ishold();
+if DebugLevel<=1
+    held = ishold();
+end
 for i=1:size(MinutiaSets,1)
     [MinutiaSetScore, Transformation]=houghTransformScore(Minutia,MinutiaSets{i},12);
     Score = Score+MinutiaSetScore^2;
@@ -25,7 +27,7 @@ for i=1:size(MinutiaSets,1)
         hold on;
     end
 end
-if held ~= ishold();
+if DebugLevel<=1 && held ~= ishold();
     hold
 end
 end
