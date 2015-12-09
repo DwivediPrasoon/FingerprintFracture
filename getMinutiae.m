@@ -1,4 +1,4 @@
-function [ Minutiae ] = getMinutia( ImageFile, Same, Close, Walk)
+function [ Minutiae ] = getMinutiae( ImageFile, Same, Close, Walk)
 %Program for Fingerprint Minutiae Extraction
 %
 %Based on program by Athi Narayanan S

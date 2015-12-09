@@ -50,7 +50,7 @@ function [ MinutiaSets, StraightMinutiaSets ] = brokenEnroll( Minutia, ShapeCoun
             StraightMinutiaSets{Shape}(Point,:) = Tmp;
         end
         for Point = 1:PointCount
-            MinutiaSets{Shape}(Point, :) = untransformMinutia(StraightMinutiaSets{Shape}(Point,:),StraightMinutiaSets{Shape}(1,:));
+            MinutiaSets{Shape}(Point, :) = untransformMinutia(StraightMinutiaSets{Shape}(Point,:),StraightMinutiaSets{Shape}(1,:))+[rand*2-0.5 rand*2-0.5 rand*2-0.5];
         end
     end
 end
